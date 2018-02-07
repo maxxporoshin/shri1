@@ -1,0 +1,46 @@
+.container
+    display: grid
+    grid-template-areas: "header header header" ". content ." "footer footer footer"
+    .header
+        display: grid
+        grid-area: header
+        grid-template-areas: "photo name name" "photo . ." "photo about about"
+        // align-items: center
+        height: 300px
+        background-color: #88c
+        color: #fff
+        .photo
+            grid-area: photo
+            // self-align: stretch
+            background-image: url('file:////Users/Smart/Pictures/Arts/90ab68eb24b5bcc69a0056ce3884051a-d9fdxvf.jpg')
+            background-size: auto 100%
+            background-repeat: no-repeat
+        .name
+            grid-area: name
+        .about
+            grid-area: about
+    .footer
+        grid-area: footer
+        height: 250px
+    .content
+        grid-area: content
+        .section
+            .title
+                grid-area: title
+            &.expectations
+                display: grid
+                grid-template-areas: "title . ." "freedom freedom equality" "brotherhood employment employment"
+                grid-gap: 10px 10px
+                justify-items: stretch
+                .tile
+                    background-color: #bbb
+                    height: 125px
+                    padding: 10px
+                    &.freedom
+                        grid-area: freedom
+                    &.equality
+                        grid-area: equality
+                    &.brotherhood
+                        grid-area: brotherhood
+                    &.employment
+                        grid-area: employment

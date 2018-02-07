@@ -1,0 +1,20 @@
+{
+  "name": "shri-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "mkdir dist; npm run build:sass:watch & npm run build:jade:watch",
+    "build": "mkdir dist; npm run build:sass && npm run build:jade",
+    "build:sass": "sass src/style.sass dist/style.css",
+    "build:jade": "jade src/index.jade -o dist",
+    "build:sass:watch": "sass --watch src/style.sass:dist/style.css",
+    "build:jade:watch": "npm run build:jade -- --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jade": "^1.11.0",
+    "node-sass": "^4.7.2"
+  }
+}
